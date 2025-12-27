@@ -12,7 +12,7 @@
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <div class="logo"><a href="#">Salão</a></div>
+                <div class="logo"><a href="index.html">Salão & Estilo</a></div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#servicos">Serviços</a></li>
@@ -35,14 +35,14 @@
             <div class="hero-content">
                 <h1>Defina o Seu Estilo</h1>
                 <p>Experiencie luxo, tratamento capilar e styling dos nossos especialistas. O seu look perfeito espera por si.</p>
-                <a href="#" class="btn">Marcar um Agendamento</a>
+                <a href="#" class="btn" id="agendar">Marcar um Agendamento</a>
             </div>
         </section>
 
         <div class="modal-agendamento">
-            <dialog>
-                <span>X</span>
-                <form method="dialog" class="form-agendamento">
+            <dialog id="modal">
+                <span id="close-modal">X</span>
+                <form method="dialog" class="form-agendamento" >
                     <h2>Marcar uma Sessão</h2>
                     <label for="name">Nome Completo:</label>
                     <input type="text" id="name" name="name" required>
@@ -66,11 +66,11 @@
                     <label for="date">Data Preferida:</label>
                     <input type="date" id="date" name="date" required>
 
-                    <label for="time">Hora Preferida:</label>
-                    <input type="time" id="time" name="time" required>
+                    <label for="time">Hora Preferida (Nota: escolher AM ou PM):</label>
+                    <input type="time" id="time" name="time" required placeholder="11:00 AM">
 
                     <button type="submit" class="btn-submit">Enviar Pedido</button>
-                    <button type="button" class="btn-cancel">Cancelar</button>
+                    <button type="reset" class="btn-cancel">Apagar</button>
                 </form>
             </dialog>
         </div>

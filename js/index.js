@@ -47,3 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+/*modal*/
+const agendarBtn = document.getElementById('agendar');
+const modal = document.getElementById('modal');
+const closeModalBtn = document.getElementById('close-modal');
+
+agendarBtn.addEventListener('click', () => {
+    modal.showModal();
+});
+
+closeModalBtn.addEventListener('click', () => {
+    modal.close();
+});

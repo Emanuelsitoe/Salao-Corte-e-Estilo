@@ -162,6 +162,74 @@ font-weight: 500;
 
 
 /*modal*/
+.form-agendamento {
+display: flex;
+flex-direction: column;
+}
+dialog{
+background-color: var(--cor-card-fundo);
+border: none;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+width: 90%;
+max-width: 500px;
+margin: auto;
+}
+dialog form h2{
+    color: var(--cor-texto-claro);
+    margin-bottom: 15px;
+
+}
+dialog form label{
+    color: var(--cor-texto-secundario);
+    margin-bottom: 5px;
+}
+
+dialog form input, dialog form select, dialog form textarea{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-claro);
+}
+
+#close-modal{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.4rem;
+    color: var(--cor-texto-secundario);
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-submit{
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-submit:hover{
+    background-color: var(--cor-destaque-secundaria);
+}
+
+.btn-cancel{
+    background-color: #c0392b;
+    color: var(--cor-texto-claro);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 
 
 /* Seções */
