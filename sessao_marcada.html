@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessão Marcada</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --cor-fundo: #0c1016; /* Fundo Preto/Marinho Escuro */
+            --cor-card-fundo: #1a1e24; /* Fundo dos Cards */
+            --cor-texto-claro: #f4f6f9; /* Texto Principal Claro */
+            --cor-texto-secundario: #b0bec5; /* Texto Auxiliar */
+            --cor-destaque: #0a65cc; /* Azul Elétrico (Botão 'Book Now' e Logo) */
+            --cor-destaque-secundaria: #0088ff; /* Azul para preços e hover */
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            
+        }
+        .seesao-marcada {
+            background: var(--cor-fundo);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: inline-block;
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin-top: 20vh;
+        }
+        .seesao-marcada h1 {
+            color: var(--cor-texto-claro);
+        }
+        .seesao-marcada p {
+            color: var(--cor-texto-secundario);
+        }
+        .seesao-marcada a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--cor-destaque);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        .seesao-marcada a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="seesao-marcada">
+        <h1>Sessão Marcada com Sucesso!</h1>
+        <p>Obrigado por marcar uma sessão connosco. Entraremos em contacto brevemente para confirmar os detalhes.</p>
+        <a href="index.html">Voltar à Página Inicial</a>
+
+    </div>
+</body>
+</html>

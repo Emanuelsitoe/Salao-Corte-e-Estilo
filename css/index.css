@@ -8,6 +8,9 @@
     --cor-borda: #2f3640; /* Linhas de Separação */
     --cor-preco: #0088ff; /* Cor Azulada para Preços */
 }
+html{
+    scroll-behavior: smooth;
+}
 
 * {
     box-sizing: border-box;
