@@ -39,9 +39,44 @@
             </div>
         </section>
 
+        <div class="modal-agendamento">
+            <dialog>
+                <span>X</span>
+                <form method="dialog" class="form-agendamento">
+                    <h2>Marcar uma Sessão</h2>
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="service">Serviço Desejado:</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Selecione um serviço</option>
+                        <option value="corte-feminino">Corte & Estilo Feminino</option>
+                        <option value="corte-masculino">Corte Masculino</option>
+                        <option value="cor-completa">Cor Completa</option>
+                        <option value="balayage">Balayage / Madeixas</option>
+                        <option value="blowout">Blowout & Estilo</option>
+                    </select>
+
+                    <label for="date">Data Preferida:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="time">Hora Preferida:</label>
+                    <input type="time" id="time" name="time" required>
+
+                    <button type="submit" class="btn-submit">Enviar Pedido</button>
+                    <button type="button" class="btn-cancel">Cancelar</button>
+                </form>
+            </dialog>
+        </div>
         <section id="signature-cuts">
             <div class="container">
-                <h2>Os Nossos Cortes de Assinatura</h2>
+                <h2>Os Nossos Cortes</h2>
                 <div class="signature-cuts">
                     <div class="cut-card">
                         <img src="" alt="Modern Bob Cut">
