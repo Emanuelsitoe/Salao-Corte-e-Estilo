@@ -1,0 +1,394 @@
+:root {
+    --cor-fundo: #0c1016; /* Fundo Preto/Marinho Escuro */
+    --cor-card-fundo: #1a1e24; /* Fundo dos Cards */
+    --cor-texto-claro: #f4f6f9; /* Texto Principal Claro */
+    --cor-texto-secundario: #b0bec5; /* Texto Auxiliar */
+    --cor-destaque: #0a65cc; /* Azul Elétrico (Botão 'Book Now' e Logo) */
+    --cor-destaque-secundaria: #0088ff; /* Azul para preços e hover */
+    --cor-borda: #2f3640; /* Linhas de Separação */
+    --cor-preco: #0088ff; /* Cor Azulada para Preços */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-claro);
+    line-height: 1.6;
+}
+
+a {
+text-decoration: none;
+color: var(--cor-texto-claro);
+transition: color 0.3s ease;
+}
+
+a:hover {
+color: var(--cor-destaque-secundaria);
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+/* Header e Navegação */
+.header {
+background-color: var(--cor-fundo);
+padding: 15px 0;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo a {
+font-size: 1.2rem; /* Tamanho original mais discreto */
+font-weight: 600;
+color: var(--cor-destaque);
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+}
+
+.nav-links li {
+margin-left: 20px;
+}
+
+.nav-links a {
+padding: 5px 10px;
+font-size: 0.95rem;
+text-transform: capitalize; /* Links com capitalização no template */
+}
+
+.book-btn {
+background-color: var(--cor-destaque);
+color: var(--cor-texto-claro);
+padding: 8px 20px;
+border-radius: 3px;
+font-weight: 500;
+transition: background-color 0.3s, transform 0.3s;
+}
+
+.book-btn:hover {
+background-color: #3784e2;
+transform: scale(1.03);
+}
+
+.hamburger {
+display: none;
+cursor: pointer;
+flex-direction: column;
+justify-content: space-around;
+width: 30px;
+height: 25px;
+}
+
+.line {
+width: 100%;
+height: 3px;
+background-color: var(--cor-texto-claro);
+transition: all 0.3s ease;
+}
+
+/* Banner Principal (Hero) */
+.hero {
+position: relative;
+height: 60vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+overflow: hidden;
+background: url('') center/cover no-repeat;
+margin-bottom: 50px;
+}
+
+/* Overlay escuro, mas mantendo a cor da imagem */
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.4);
+z-index: 1;
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+padding: 20px;
+animation: slideUp 1s ease-out;
+}
+
+.hero h1 {
+font-size: 3rem;
+margin-bottom: 15px;
+color: var(--cor-texto-claro);
+font-weight: 500;
+letter-spacing: 1px;
+}
+
+.hero p {
+font-size: 1.1rem;
+margin-bottom: 30px;
+max-width: 700px;
+color: var(--cor-texto-secundario);
+}
+
+.hero .btn {
+display: inline-block;
+padding: 12px 30px;
+background-color: var(--cor-destaque);
+color: var(--cor-texto-claro);
+border-radius: 3px;
+font-weight: 500;
+}
+
+/* Seções */
+section {
+padding: 40px 0 60px;
+}
+
+h2 {
+font-size: 1.5rem;
+margin-bottom: 30px;
+text-align: left;
+font-weight: 500;
+color: var(--cor-texto-claro);
+}
+
+/* Nossos Cortes de Assinatura */
+.signature-cuts {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+margin-bottom: 50px;
+}
+
+.cut-card {
+position: relative;
+overflow: hidden;
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+transition: transform 0.3s ease;
+}
+
+.cut-card:hover {
+transform: scale(1.05);
+}
+
+.cut-card img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+filter: brightness(80%);
+}
+
+.cut-card h3 {
+position: absolute;
+bottom: 10px;
+left: 10px;
+color: var(--cor-texto-claro);
+font-size: 1.1rem;
+font-weight: 500;
+background: rgba(0, 0, 0, 0.5);
+padding: 5px 10px;
+border-radius: 3px;
+}
+
+/* Serviços e Preços */
+.services-table {
+background-color: var(--cor-fundo); /* Mantém o fundo da seção principal */
+margin-bottom: 50px;
+}
+
+.services-table table {
+width: 100%;
+border-collapse: collapse;
+text-align: left;
+}
+
+.services-table th, .services-table td {
+padding: 15px 0;
+border-bottom: 1px solid var(--cor-borda);
+}
+
+.services-table th {
+font-weight: normal;
+}
+
+/* A cor do Preço é o destaque no template original */
+.price-col {
+text-align: right;
+color: var(--cor-preco);
+font-weight: 500;
+}
+
+.duration-col {
+text-align: right;
+padding-right: 20px;
+}
+        
+/* Produtos em Destaque */
+.products-section h2 {
+margin-bottom: 20px;
+}
+
+.product-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
+}
+
+.product-card {
+background-color: var(--cor-card-fundo);
+border-radius: 5px;
+padding: 15px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+transform: translateY(-5px);
+}
+
+.product-card img {
+width: 100%;
+height: 250px;
+object-fit: cover; /* Mantém o estilo de imagem do template */
+margin-bottom: 10px;
+}
+
+.product-info h3 {
+font-size: 1rem;
+font-weight: 600;
+margin-bottom: 5px;
+color: var(--cor-texto-claro);
+}
+
+.product-info p {
+font-size: 0.85rem;
+color: var(--cor-texto-secundario);
+margin-bottom: 10px;
+line-height: 1.3;
+}
+
+.product-info .price {
+font-size: 1.1rem;
+font-weight: bold;
+color: var(--cor-preco); /* Preço na cor azul */
+}
+
+/* Rodapé (Footer) */
+.footer {
+background-color: var(--cor-fundo);
+padding: 40px 0 20px;
+}
+
+.footer-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+margin-bottom: 30px;
+}
+
+.footer-section h3 {
+font-size: 1rem;
+font-weight: 600;
+color: var(--cor-texto-claro);
+margin-bottom: 15px;
+}
+
+.footer-section p {
+font-size: 0.9rem;
+line-height: 1.4;
+color: var(--cor-texto-secundario);
+}
+
+.footer-section li {
+list-style: none;
+font-size: 0.9rem;
+line-height: 1.6;
+color: var(--cor-texto-secundario);
+}
+
+.social-links a {
+margin-right: 15px;
+font-size: 1.2rem;
+color: var(--cor-texto-secundario);
+}
+
+.copyright {
+text-align: center;
+font-size: 0.8rem;
+color: #78909c;
+padding-top: 20px;
+border-top: 1px solid var(--cor-borda);
+}
+
+/* Animações */
+@keyframes slideUp {
+from { transform: translateY(20px); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
+
+/* Media Queries - Responsividade (Menu Hamburger) */
+@media (max-width: 900px) {
+.signature-cuts, .product-grid, .footer-grid {
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.signature-cuts { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+}
+
+@media (max-width: 768px) {
+.nav-links {
+position: absolute;
+top: 60px;
+left: 0;
+width: 100%;
+flex-direction: column;
+background-color: var(--cor-fundo);
+border-top: 1px solid var(--cor-borda);
+padding: 15px 0;
+display: none;
+text-align: center;
+}
+
+.nav-links li {
+margin: 10px 0;
+}
+
+.nav-links.active {
+display: flex;
+}
+
+.hamburger {
+display: flex;
+}
+
+/* Animação do Hamburger (Cruz) */
+.hamburger.active .line:nth-child(2) { opacity: 0; }
+.hamburger.active .line:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.hamburger.active .line:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+.hero h1 { font-size: 2.2rem; }
+h2 { font-size: 1.3rem; }
+
+.services-table td, .services-table th { font-size: 0.9rem; padding: 10px 0; }
+}
