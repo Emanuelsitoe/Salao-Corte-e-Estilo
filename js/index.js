@@ -59,3 +59,10 @@ agendarBtn.addEventListener('click', () => {
 closeModalBtn.addEventListener('click', () => {
     modal.close();
 });
+
+/*modal com o botao do cabecalho*/
+const agendarSessaoBtn = document.getElementById('agendar_sessao');
+
+agendarSessaoBtn.addEventListener('click', () => {
+    modal.showModal();
+});
